@@ -5,7 +5,6 @@ import requests
 import traceback
 import feedparser
 import random
-import hava_durumu_api_anahtarı
 from PIL import Image, ImageTk
 
 class Acilis(Toplevel):
@@ -113,7 +112,7 @@ class Hava_Durumu(Frame):
         self.lbl_hata.place(x=320,y=245,relwidth=1,height=20)
 
     def get_weather(self):
-        api_key=hava_durumu_api_anahtarı.api_key
+        api_key="15f25de1f110b27b1185dc7a0ffc60e4"
         complete_url=f"http://api.openweathermap.org/data/2.5/weather?q={self.var_arama.get()}&appid={api_key}"     
         if self.var_arama.get()=="":
             self.lbl_hata.config(text="Şehir Adı Girmelisiniz")
